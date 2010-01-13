@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class Account < ActiveRecord::Base
   include EveRecord
 
   has_many :characters, :dependent => :destroy
