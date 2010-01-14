@@ -1,0 +1,13 @@
+<p>
+  <b>Id:</b>
+  <%=h @account.id %>
+</p>
+
+<p>
+  <b>Full api key:</b>
+  <%=h @account.full_api_key %>
+</p>
+
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
