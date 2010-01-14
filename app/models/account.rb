@@ -1,6 +1,7 @@
 class Account < ActiveRecord::Base
   include EveRecord
 
+  belongs_to :user
   has_many :characters, :dependent => :destroy
 
   def api
