@@ -1,0 +1,3 @@
+<pre><%=h @user.inspect %></pre>
+
+<%= image_tag(@user.profile_image_url, {:width => 31, :height => 31, :alt => @user.name}) %> Welcome @<%=h @user.login %>!
