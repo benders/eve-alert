@@ -12,9 +12,9 @@
     <%= f.text_field :full_api_key %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update' %> | 
+    <%= link_to 'Cancel', home_path %> | 
+    <%= link_to 'Remove', @account, :confirm => 'Are you sure?', :method => :delete %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @account %> |
-<%= link_to 'Back', accounts_path %>

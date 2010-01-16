@@ -9,6 +9,14 @@ a { color: inherit; }
 a:visited { color: inherit; }
 a:hover { color: inherit; background-color: inherit;}
 
+ul {
+  list-style: none;
+}
+
+.character_portrait {
+  vertical-align: middle;
+}
+
 div#banner {
   position: absolute;
   top: 0px;
@@ -39,3 +47,4 @@ div#right_side {
 div#footer {
   clear: both;
 }
+

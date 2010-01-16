@@ -1,0 +1,11 @@
+<div id="accounts">
+  <h2>Eve Accounts</h2>
+  <ul>
+    <% accounts.each do |account| %>
+    <li><%= link_to account.id, edit_account_path(account) %>
+      <span id="character_names"><%=h account.characters.map{|x| x.name}.join(", ") %></span>
+    </li>
+    <% end -%>
+  </ul>
+  <p><%= link_to "Add an account", new_account_path %></p>
+</div>

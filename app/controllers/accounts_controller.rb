@@ -3,12 +3,13 @@ class AccountsController < SecureController
   # GET /accounts
   # GET /accounts.xml
   def index
-    @accounts = current_user.accounts
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @accounts }
-    end
+    redirect_to home_url
+    # @accounts = current_user.accounts
+    # 
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.xml  { render :xml => @accounts }
+    # end
   end
 
   # GET /accounts/1
@@ -46,7 +47,7 @@ class AccountsController < SecureController
     respond_to do |format|
       if @account.save
         flash[:notice] = 'Account was successfully created.'
-        format.html { redirect_to(accounts_url) }
+        format.html { redirect_to(home_url) }
         format.xml  { render :xml => @account, :status => :created, :location => @account }
       else
         format.html { render :action => "new" }
@@ -63,7 +64,7 @@ class AccountsController < SecureController
     respond_to do |format|
       if @account.update_attributes(params[:account])
         flash[:notice] = 'Account was successfully updated.'
-        format.html { redirect_to(accounts_url) }
+        format.html { redirect_to(home_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -79,7 +80,7 @@ class AccountsController < SecureController
     @account.destroy
 
     respond_to do |format|
-      format.html { redirect_to(accounts_url) }
+      format.html { redirect_to(home_url) }
       format.xml  { head :ok }
     end
   end

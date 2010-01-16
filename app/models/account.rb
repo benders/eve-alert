@@ -3,6 +3,8 @@ class Account < ActiveRecord::Base
 
   belongs_to :user
   has_many :characters, :dependent => :destroy
+  
+  after_save :get_characters
 
   def api
     @api ||= Reve::API.new(self.id, self.full_api_key)
