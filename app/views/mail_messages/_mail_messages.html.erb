@@ -1,0 +1,10 @@
+<div id="mail_messages">
+  <h2>Eve Mail</h2>
+  <ul>
+    <% mail_messages.each do |message| %>
+    <li>
+      <span><%=h message.send_date %> - <%=h message.title %></span>
+    </li>
+    <% end -%>
+  </ul>
+</div>

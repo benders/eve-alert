@@ -1,3 +1,9 @@
 <%= render :partial => 'accounts/accounts.html.erb', :locals => {:accounts => @user.accounts} %>
 
 <%= render :partial => 'characters/characters.html.erb', :locals => {:characters => @user.accounts.map{|x| x.characters}.flatten} %>
+
+<%= render :partial => 'notifications/notifications.html.erb',
+  :locals => {:notifications => @user.accounts.map{|x| x.characters}.flatten.map{|x| x.notifications}.flatten} %>
+
+<%= render :partial => 'mail_messages/mail_messages.html.erb',
+  :locals => {:mail_messages => @user.accounts.map{|x| x.characters}.flatten.map{|x| x.mail_messages}.flatten} %>

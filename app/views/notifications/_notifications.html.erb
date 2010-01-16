@@ -1,0 +1,10 @@
+<div id="notifications">
+  <h2>Notifications</h2>
+  <ul>
+    <% notifications.each do |notification| %>
+    <li>
+      <span><%=h notification.send_date %> - <%=h notification.notification_type_id %></span>
+    </li>
+    <% end -%>
+  </ul>
+</div>

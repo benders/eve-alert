@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100114004947) do
+ActiveRecord::Schema.define(:version => 20100116073558) do
 
   create_table "accounts", :force => true do |t|
     t.string   "full_api_key"
@@ -23,6 +23,29 @@ ActiveRecord::Schema.define(:version => 20100114004947) do
     t.string   "name"
     t.integer  "corporation_id"
     t.string   "corporation_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mail_messages", :force => true do |t|
+    t.integer  "character_id"
+    t.integer  "sender_id"
+    t.datetime "send_date"
+    t.string   "title"
+    t.integer  "to_corp_or_alliance_id"
+    t.string   "to_character_ids"
+    t.string   "to_list_ids"
+    t.boolean  "read"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", :force => true do |t|
+    t.integer  "character_id"
+    t.integer  "notification_type_id"
+    t.integer  "sender_id"
+    t.datetime "send_date"
+    t.boolean  "read"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

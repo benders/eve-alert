@@ -5,7 +5,7 @@
     <li>
       <%= image_tag "http://img.eve.is/serv.asp?s=64&amp;c=#{character.id}", 
         :width => 64, :height => 64, :alt => character.name, :class => "character_portrait" %>
-      <%= check_box_tag "#{character.id}[enabled]", 1, true %>
+      <%#= check_box_tag "#{character.id}[enabled]", 1, true %>
       <span class="character_name"><%= character.name %></span>
       <span class="corporation">(<%=h character.corporation_name %>)</span>
     </li>

@@ -2,8 +2,9 @@
   <h2>Eve Accounts</h2>
   <ul>
     <% accounts.each do |account| %>
-    <li><%= link_to account.id, edit_account_path(account) %>
+    <li><%=h account.id %> &mdash; 
       <span id="character_names"><%=h account.characters.map{|x| x.name}.join(", ") %></span>
+      [<%= link_to "edit", edit_account_path(account) %>]
     </li>
     <% end -%>
   </ul>

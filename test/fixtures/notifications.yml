@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  character_id: 1
+  notification_type_id: 1
+  sender_id: 1
+  send_date: 2010-01-15 23:35:58
+  read: false
+
+two:
+  character_id: 1
+  notification_type_id: 1
+  sender_id: 1
+  send_date: 2010-01-15 23:35:58
+  read: false
