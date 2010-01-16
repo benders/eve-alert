@@ -9,7 +9,8 @@
     <%= stylesheet_link_tag 'application' %>
   </head>
   <body>    
-    <div id="banner"><div id="user_block">
+    <div id="header">
+    <div id="user_block">
     <% if logged_in? -%>
       <table border="0"><tr>
         <td><%= image_tag(current_user.profile_image_url, :width => 31, :height => 31, :alt => current_user.name) %></td>
@@ -17,9 +18,11 @@
         <td>[<%= link_to "logout", logout_path %>]</td>
       </tr></table>
     <% else %>
-      <%= link_to image_tag("Sign-in-with-Twitter-darker.png"), home_url %>
+      <%= link_to image_tag("Sign-in-with-Twitter-darker.png"), home_url, {:style => "vertical-align: middle;"} %>
     <% end %>
-    </div></div>
+    </div>
+    <div id="banner"></div>
+    </div>
     <div id="page">
       <div id="flash"><p style="color: green"><%= flash[:notice] %></p></div>
       <%= yield %>
