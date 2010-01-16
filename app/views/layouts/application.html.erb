@@ -3,16 +3,26 @@
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta content="en-us" http-equiv="Content-Language" />
-    <meta content="no" http-equiv="imagetoolbar" />
-    <meta content="width = 780" name="viewport" />
-    <meta content="" name="page" />
-    <meta content="NOODP" name="robots" />
-    <%= stylesheet_link_tag("application") %>
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
     <%= stylesheet_link_tag 'scaffold' %>
+    <%= stylesheet_link_tag 'application' %>
   </head>
   <body>    
-    <p style="color: green"><%= flash[:notice] %></p>
-
-    <%= yield %>
+    <div id="banner"><div id="user_block">
+    <% if logged_in? -%>
+      <table border="0"><tr>
+        <td><%= image_tag(current_user.profile_image_url, :width => 31, :height => 31, :alt => current_user.name) %></td>
+        <td>@<%=h current_user.login %></td>
+        <td>[<%= link_to "logout", logout_path %>]</td>
+      </tr></table>
+    <% else %>
+      <%= link_to image_tag("Sign-in-with-Twitter-darker.png"), accounts_url %>
+    <% end %>
+    </div></div>
+    <div id="page">
+      <div id="flash"><p style="color: green"><%= flash[:notice] %></p></div>
+      <%= yield %>
+    </div>
   </body>
 </html>

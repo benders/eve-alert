@@ -1,3 +1,41 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin-top: 64px;
+  background-color: black;
+  color: #eee;
+}
+
+a { color: inherit; }
+a:visited { color: inherit; }
+a:hover { color: inherit; background-color: inherit;}
+
+div#banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+
+div#user_block {
+  padding: 5px;
+  float: right;
+}
+
+div#page {
+  height: 100%;
+  width: 760px;
+  margin: auto;
+}
+
+div#main {
+}
+
+div#right_side {
+  float: right;
+}
+
+div#footer {
+  clear: both;
 }

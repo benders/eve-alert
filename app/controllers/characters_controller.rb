@@ -1,2 +1,2 @@
-class CharactersController < ApplicationController
+class CharactersController < SecureController
 end

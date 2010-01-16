@@ -1,13 +1,10 @@
-<!-- <pre><%=h @user.inspect %></pre> -->
-
-<p><%= image_tag(@user.profile_image_url, :width => 31, :height => 31, :alt => @user.name) %> Welcome @<%=h @user.login %>!</p>
-
 <div id="accounts">
-  <p>Eve Accounts</p>
+  <h2>Eve Accounts</h2>
   <ul>
-    <% for account in @user.accounts -%>
-    <li><%= link_to account.id, account %>
-      <span id="character_names"><%=h account.characters.map{|x| x.name}.join(", ") %></span></li>
+    <% @user.accounts.each do |account| %>
+    <li><%= link_to account.id, edit_account_path(account) %>
+      <span id="character_names"><%=h account.characters.map{|x| x.name}.join(", ") %></span>
+      <span>[<%= link_to 'Remove', account, :confirm => 'Are you sure?', :method => :delete %>]</span></li>
     <% end -%>
   </ul>
   <p><%= link_to "Add an account", new_account_path %></p>

@@ -1,6 +1,4 @@
-class UserController < ApplicationController
-  before_filter :login_required
-  
+class UserController < SecureController
   def index
     @user = current_user
   end
