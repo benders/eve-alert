@@ -3,7 +3,11 @@
   <ul>
     <% accounts.each do |account| %>
     <li><%=h account.id %> &mdash; 
+      <% if account.error %>
+        <span class="error_message"><%=h account.error %></span>
+      <% else %>
       <span id="character_names"><%=h account.characters.map{|x| x.name}.join(", ") %></span>
+      <% end %>
       [<%= link_to "edit", edit_account_path(account) %>]
     </li>
     <% end -%>

@@ -17,6 +17,10 @@ ul {
   vertical-align: middle;
 }
 
+.error_message {
+  color: red;
+}
+
 div#header {
   position: absolute;
   top: 0px;
@@ -56,4 +60,3 @@ div#right_side {
 div#footer {
   clear: both;
 }
-
