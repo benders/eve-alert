@@ -5,11 +5,11 @@
 
   <p>
     <%= f.label :id %><br />
-    <%= f.text_field :id %>
+    <%= f.text_field :id, {:size => 8} %>
   </p>
   <p>
     <%= f.label :full_api_key %><br />
-    <%= f.text_field :full_api_key %>
+    <%= f.text_field :full_api_key, {:size => 65} %>
   </p>
   <p>
     <%= f.submit 'Update' %> | 

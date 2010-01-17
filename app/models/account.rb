@@ -3,11 +3,19 @@ class Account < ActiveRecord::Base
 
   belongs_to :user
   has_many :characters, :dependent => :destroy
-  
+
+  validate :must_have_full_api_key
   after_save :get_characters
 
   def api
     @api ||= Reve::API.new(self.id, self.full_api_key)
+  end
+
+  def must_have_full_api_key
+    character = api.characters.first
+    api.personal_wallet_balance( :characterid => character.id )
+  rescue Reve::Exceptions::ReveError => e
+    errors.add_to_base("Eve API: " + e.to_s)
   end
 
   def get_characters

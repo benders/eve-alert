@@ -17,7 +17,7 @@ ul {
   vertical-align: middle;
 }
 
-.error_message {
+.error_message, .errorExplanation {
   color: red;
 }
 
