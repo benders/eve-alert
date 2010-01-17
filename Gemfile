@@ -3,6 +3,8 @@ gem "reve", :git => "git://github.com/lisa/reve.git"
 gem "sqlite3-ruby"
 gem "twitter-auth"
 gem "json"
+gem "chronic"
+gem "packet"
 
 clear_sources
 source "http://gemcutter.org"
