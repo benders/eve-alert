@@ -1,10 +1,20 @@
 <div id="notifications">
   <h2>Notifications</h2>
-  <ul>
-    <% notifications.each do |notification| %>
-    <li>
-      <span><%=h notification.send_date %> - <%=h notification.notification_type_id %></span>
-    </li>
+  <table border="0" width="100%" style="margin-left: 3em;">
+    <tr>
+      <th>To</th>
+      <th>From</th>
+      <th>Subject</th>
+      <th>Sent At</th>
+    </tr>
+    <% notifications.each do |n| %>
+    <!-- <tr style="font-weight: <%=h n.read ? 'regular' : 'bold' %>;"> -->
+    <tr>
+      <td class="nowrap"><%=h n.character.name %></td>
+      <td><%=h n.sender_id %></td>
+      <td><%=h NotificationType.get(n.notification_type_id) %></td>
+      <td><%=h n.send_date %></td>
+    </tr>
     <% end -%>
-  </ul>
+  </table>
 </div>

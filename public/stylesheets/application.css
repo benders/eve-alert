@@ -13,12 +13,21 @@ ul {
   list-style: none;
 }
 
+th {
+  text-align: left;
+  font-size: 120%;
+}
+
 .character_portrait {
   vertical-align: middle;
 }
 
 .error_message, .errorExplanation {
   color: red;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 div#header {
