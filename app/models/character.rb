@@ -9,6 +9,10 @@ class Character < ActiveRecord::Base
     get_mail_messages
   end
 
+  def self.get(id)
+    Character.find_by_id(id) || Character.create( Reve::API.new.character_name(:ids => [id]).first.instance_values )
+  end
+
   def get_notifications
     if_stale(self.account.id, self.account.api.personal_notification_url, {:characterid => self.id}, 30.minutes) do
       self.account.api.personal_notifications(:characterid => self.id).each do |x|

@@ -1,6 +1,12 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  margin-top: 64px;
+  margin: 0;
+  padding-top: 64px;
   background-color: black;
   color: #eee;
 }

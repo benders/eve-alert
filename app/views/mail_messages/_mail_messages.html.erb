@@ -7,13 +7,13 @@
       <th>Subject</th>
       <th>Sent At</th>
     </tr>
-    <% mail_messages.each do |m| %>
-    <!-- <tr style="font-weight: <%=h m.read ? 'regular' : 'bold' %>;"> -->
+    <% mail_messages.each do |x| %>
+    <!-- <tr style="font-weight: <%=h x.read ? 'regular' : 'bold' %>;"> -->
     <tr>
-      <td class="nowrap"><%=h m.character.name %></td>
-      <td><%=h m.sender_id %></td>
-      <td><%=h m.title %></td>
-      <td><%=h m.send_date %></td>
+      <td class="nowrap"><%=h x.character.name %></td>
+      <td class="nowrap"><%=h Character.get(x.sender_id).name %></td>
+      <td><%=h x.title %></td>
+      <td class="nowrap"><%=h x.send_date %></td>
     </tr>
     <% end -%>
   </table>
