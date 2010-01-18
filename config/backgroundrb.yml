@@ -1,4 +1,5 @@
 --- 
 :backgroundrb: 
   :port: 11006
-  :ip: 0.0.0.0
+  :ip: 127.0.0.1
+  :persistent_disabled: true
