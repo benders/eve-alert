@@ -36,6 +36,11 @@ th {
   white-space: nowrap;
 }
 
+.newtab {
+  target-name: new;
+  target-new: tab;
+}
+
 div#header {
   position: absolute;
   top: 0px;

@@ -4,9 +4,10 @@
     <%= check_box_tag "twitter", 1, false, {:disabled => true} %>
     <%= image_tag "twitter_logo_header.png", :alt => "Twitter Logo", :style => "vertical-align: middle" %>
   </div>
-  <p>In order to receive alerts, <br/>
-    you must follow <%= link_to "@evealert_alerts", "http://twitter.com/evealert_alerts", :target => "_blank" %>.</p>
   <p>Alerts will be sent as<br/> Direct Messages.</p>
+  <p>In order to receive alerts, <br/>
+    you must be following <br/>
+    <%= link_to "@evealert_alerts", "http://twitter.com/evealert_alerts", :target => "_blank", :class => "newtab" %>.</p>
 </div>
 
 <%= render :partial => 'accounts/accounts.html.erb', :locals => {:accounts => @user.accounts} %>
