@@ -5,6 +5,7 @@ gem "twitter-auth"
 gem "json"
 gem "chronic"
 gem "packet"
+gem "twitter"
 
 clear_sources
 source "http://gemcutter.org"
