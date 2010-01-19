@@ -7,13 +7,13 @@
       <th>Subject</th>
       <th>Sent At</th>
     </tr>
-    <% mail_messages.each do |x| %>
+    <% mail_messages.sort{|a,b| a.id <=> b.id}.reverse.each do |x| %>
     <!-- <tr style="font-weight: <%=h x.read ? 'regular' : 'bold' %>;"> -->
     <tr>
       <td class="nowrap"><%=h x.character.name %></td>
       <td class="nowrap"><%=h Character.get(x.sender_id).name %></td>
       <td><%=h x.title %></td>
-      <td class="nowrap"><%=h x.send_date %></td>
+      <td class="nowrap"><%=h pretty_time(user_time(x.send_date)) %></td>
     </tr>
     <% end -%>
   </table>

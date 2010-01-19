@@ -7,13 +7,13 @@
       <th>Subject</th>
       <th>Sent At</th>
     </tr>
-    <% notifications.each do |n| %>
+    <% notifications.sort{|a,b| a.id <=> b.id}.reverse.each do |n| %>
     <!-- <tr style="font-weight: <%=h n.read ? 'regular' : 'bold' %>;"> -->
     <tr>
       <td class="nowrap"><%=h n.character.name %></td>
       <td class="nowrap"><%=h Character.get(n.sender_id).name %></td>
       <td><%=h NotificationType.get(n.notification_type_id) %></td>
-      <td class="nowrap"><%=h n.send_date %></td>
+      <td class="nowrap"><%=h pretty_time(user_time(n.send_date)) %></td>
     </tr>
     <% end -%>
   </table>

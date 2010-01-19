@@ -4,16 +4,19 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
   margin: 0;
   padding-top: 64px;
-  background-color: black;
-  color: #eee;
+  background-color: rgb(8, 8, 10);
+  color: rgb(221, 221, 221);
 }
 
-a { color: inherit; }
-a:visited { color: inherit; }
-a:hover { color: inherit; background-color: inherit;}
+a {
+  color: rgb(255, 165, 0);
+  text-decoration: none;
+}
+a:visited { color: rgb(255, 165, 0); }
+a:hover { color: rgb(255, 165, 0); background-color: inherit;}
 
 ul {
   list-style: none;
@@ -47,7 +50,8 @@ div#header {
   left: 0px;
   width: 100%;
   background-color: #eee;
-  color: black;
+  color: #111;
+/*  border-bottom: 1px solid #999; */
 }
 
 /*div#banner {
@@ -60,8 +64,7 @@ div#user_block {
   padding: 5px;
   float: right;
   width: 40%;
-  background-color: #eee;
-  color: black;
+/*  background-color: rgb(77, 77, 86);*/
 }
 
 div#page {
@@ -73,8 +76,18 @@ div#page {
 div#main {
 }
 
+/*div#inner_right_side {
+  background-color: #333;
+  padding: 1em;
+  border: 1px dotted #999;
+}
+*/
 div#right_side {
   float: right;
+  margin-left: 2em;
+  background-color: #333;
+  padding: 1em;
+  border: 1px dotted #999;
 }
 
 div#footer {
