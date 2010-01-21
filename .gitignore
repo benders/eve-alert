@@ -4,3 +4,4 @@ bin/*
 gems/*
 !gems/ruby/1.8/cache/
 db/*.sqlite3
+config/twitter_auth.yml
