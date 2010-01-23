@@ -1,20 +1,24 @@
 <div id="right_side"><div id="inner_right_side">
   <h2>Get Alerts via Twitter</h2>
   <div>
-    <%= check_box_tag "twitter", 1, false, {:disabled => true} %>
+    <%= check_box_tag "twitter", 1, following_alerts?, {:disabled => true} %>
     <%= image_tag "twitter_logo_header.png", :alt => "Twitter Logo", :style => "vertical-align: middle", :height => 24 %>
   </div>
   <p>Alerts will be sent as<br/> Direct Messages.</p>
+  <table border="0"><tr>
+    <td>
   <p>In order to receive alerts, <br/>
     you must be following <br/>
     <%= link_to "@evealert_alerts", "http://twitter.com/evealert_alerts", :target => "_blank", :class => "newtab" %>.</p>
-  <p>
-    <% if following_alerts? %>
-    Check!
-    <% else %>
-    Negative.
-    <% end %>
-  </p>
+    </td>
+    <td>
+      <% if following_alerts? %>
+      <b><font color="green">OK</font></b>
+      <% else %>
+      <font color="red">Error</font>
+      <% end %>
+    </td>
+  </tr></table>
 </div></div>
 
 <%= render :partial => 'accounts/accounts.html.erb', :locals => {:accounts => @user.accounts} %>
