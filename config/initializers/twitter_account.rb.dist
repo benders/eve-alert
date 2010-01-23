@@ -1,0 +1,2 @@
+TWITTER_LOGIN = 'alert_user_twitter_login'
+TWITTER_PASSWORD = 'alert_user_twitter_password'

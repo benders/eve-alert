@@ -8,6 +8,13 @@
   <p>In order to receive alerts, <br/>
     you must be following <br/>
     <%= link_to "@evealert_alerts", "http://twitter.com/evealert_alerts", :target => "_blank", :class => "newtab" %>.</p>
+  <p>
+    <% if following_alerts? %>
+    Check!
+    <% else %>
+    Negative.
+    <% end %>
+  </p>
 </div></div>
 
 <%= render :partial => 'accounts/accounts.html.erb', :locals => {:accounts => @user.accounts} %>
