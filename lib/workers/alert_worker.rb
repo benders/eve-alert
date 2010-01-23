@@ -17,6 +17,9 @@ class AlertWorker < BackgrounDRb::MetaWorker
       logger.debug "Getting Characters for Account #{account.id}"
       account.get_characters
     end
+  rescue Exception => e
+    logger.error "#{e.class} during update_characters: #{e.message}"
+    e.backtrace.each {|x| logger.error x}
   end
   
   def update_alerts
@@ -34,6 +37,9 @@ class AlertWorker < BackgrounDRb::MetaWorker
         end
       end
     end
+  rescue Exception => e
+    logger.error "#{e.class} during update_alerts: #{e.message}"
+    e.backtrace.each {|x| logger.error x}
   end
 
   private
