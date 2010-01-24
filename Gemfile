@@ -6,6 +6,7 @@ gem "json"
 gem "chronic"
 gem "packet"
 gem "twitter"
+gem "mysql"
 
 clear_sources
 source "http://gemcutter.org"
