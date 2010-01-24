@@ -6,6 +6,6 @@ module UserHelper
     @@twitter_client ||= Twitter::Base.new(@@httpauth)
     @@alert_user_id ||= @@twitter_client.verify_credentials.id
 
-    current_user.twitter.get('/friends/ids.json').include?(@@alert_user_id)
+    current_user.twitter.get('/friends/ids.json').include?(@@alert_user_id) rescue nil
   end
 end
