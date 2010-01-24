@@ -6,3 +6,4 @@ gems/*
 db/*.sqlite3
 config/twitter_auth.yml
 config/initializers/twitter_account.rb
+config/database.yml
