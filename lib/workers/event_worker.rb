@@ -11,6 +11,8 @@ class EventWorker < BackgrounDRb::MetaWorker
         Event.create_dummy(:user_id => user.id, :eve_character_id => character.id)
       end
     end
+  rescue Exception => e
+    logger.error "Error #{e.class.to_s} - #{e.message}"
   end
 end
 
