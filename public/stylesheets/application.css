@@ -69,6 +69,12 @@ ol#events li {
   overflow: hidden;
 }
 
+.meta {
+  color: #999;
+  display: block;
+  font-size: 11px;
+}
+
 .error_message, .errorExplanation {
   color: red;
 }

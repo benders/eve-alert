@@ -6,5 +6,8 @@
     <img style="width: 64px; height: 64px" class="character_portrait"/>
   <% end %>
   </span>
-  <span class="status-body"><%=h event.contents %></span>
+  <span class="status-body">
+    <%=h event.contents %>
+  <span class="meta"><%=h pretty_time(user_time(event.created_at)) %></span>
+  </span>
 </li>
