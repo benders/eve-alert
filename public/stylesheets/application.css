@@ -27,8 +27,46 @@ th {
   font-size: 120%;
 }
 
+ol#events {
+  list-style: none;
+  width: 564px;
+  background-color: #333;
+  padding: 10px;
+}
+
+ol#events li {
+  line-height: 16px;
+  padding: 10px 0px 8px;
+  padding-left: 0.5em;
+  margin: 5px;
+  background-color: #666;
+  color: #ccc;
+  font-family: Helvetica;
+  position: relative;
+}
+
+.new_event {
+  display: none;
+}
+
 .character_portrait {
-  vertical-align: middle;
+}
+
+.thumb {
+  display: block;
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  left: 6px;
+  margin: 0px 10px 0px 0px;
+  overflow: hidden;
+}
+
+.status-body {
+  display: block;
+  margin-left: 72px;
+  min-height: 64px;
+  overflow: hidden;
 }
 
 .error_message, .errorExplanation {

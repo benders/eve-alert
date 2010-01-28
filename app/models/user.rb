@@ -3,6 +3,7 @@ class User < TwitterAuth::GenericUser
   # All of the authentication logic is handled by the 
   # parent TwitterAuth::GenericUser class.
   has_many :accounts
+  has_many :events
   
   def refresh
     self.accounts.each do |a|

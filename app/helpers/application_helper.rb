@@ -7,4 +7,10 @@ module ApplicationHelper
   def pretty_time(time)
     time.strftime("%b %d, %Y %H:%M %Z")
   end
+
+  def character_image_tag(character_id)
+    image_tag("http://img.eve.is/serv.asp?s=64&amp;c=#{character_id}",
+      :width => 64, :height => 64,
+      :class => "character_portrait")
+  end
 end

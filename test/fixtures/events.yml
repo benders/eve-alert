@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  character_id: 1
+  reference_id: 1
+  reference_type: MyString
+  contents: MyString
+
+two:
+  character_id: 1
+  reference_id: 1
+  reference_type: MyString
+  contents: MyString

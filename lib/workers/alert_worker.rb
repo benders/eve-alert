@@ -8,7 +8,7 @@ class AlertWorker < BackgrounDRb::MetaWorker
     @twitter_client = Twitter::Base.new(httpauth)
     
     update_characters ; add_periodic_timer(61.minutes) { update_characters }
-    update_alerts ; add_periodic_timer(31.minutes) { update_alerts }
+    # update_alerts ; add_periodic_timer(31.minutes) { update_alerts }
   end
   
   def update_characters

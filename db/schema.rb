@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100117232943) do
+ActiveRecord::Schema.define(:version => 20100128053025) do
 
   create_table "accounts", :force => true do |t|
     t.string   "full_api_key"
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(:version => 20100117232943) do
     t.string   "name"
     t.integer  "corporation_id"
     t.string   "corporation_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "eve_character_id"
+    t.integer  "reference_id"
+    t.string   "reference_type"
+    t.string   "contents"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,10 @@
+<li id="event_<%=h event.id %>" class="<%= new_event(event) ? "new_event" : "" %>">
+  <span class="thumb">
+  <% if event.eve_character_id %>
+    <%= character_image_tag(event.eve_character_id) %>
+  <% else %>
+    <img style="width: 64px; height: 64px" class="character_portrait"/>
+  <% end %>
+  </span>
+  <span class="status-body"><%=h event.contents %></span>
+</li>

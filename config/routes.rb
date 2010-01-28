@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :events
+
   map.home 'user/:action/:id', :controller => 'user'
   map.resources :accounts do |account|
     account.resources :characters
