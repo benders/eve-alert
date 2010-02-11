@@ -5,8 +5,8 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
-  :key         => '_eve-alert_session',
-  :secret      => '6aee7d598606d0fbedf13ac09d1c2e95861b649604b31288609662fb9a8094be907daf44419dcc25895ef93cccc164bd161805470bd7dba56f7a47a27bbbb352'
+  :key    => '_eve-alert.rails_3_session',
+  :secret => '3e240e615d9bb3e93a08b3511a8e000b1ab1430d547768ecc8282a99c0b68aa768561fa6f653a959d37dbfec05ce2d0270eed0b9ae083cfe00718532fc6875d6'
 }
 
 # Use the database for sessions instead of the cookie-based default,
