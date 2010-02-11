@@ -1,4 +1,6 @@
-gem "rails", "2.3.5"
+source :gemcutter
+
+gem "rails", "3.0.0.beta"
 gem "reve", :git => "git://github.com/lisa/reve.git"
 gem "sqlite3-ruby"
 gem "twitter-auth"
@@ -7,9 +9,3 @@ gem "chronic"
 gem "packet"
 gem "twitter"
 gem "mysql"
-
-clear_sources
-source "http://gemcutter.org"
-
-disable_system_gems
-bundle_path 'gems'

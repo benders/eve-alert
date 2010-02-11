@@ -1,11 +1,11 @@
 log/*
 tmp/*
 bin/*
-gems/ruby/1.8/gems
-gems/ruby/1.8/specifications
-gems/ruby/1.8/doc
-gems/ruby/1.8/environment.rb
-gems/ruby/1.8/dirs
+gems/bin
+gems/gems
+gems/specifications
+gems/doc
+gems/dirs
 db/*.sqlite3
 config/twitter_auth.yml
 config/initializers/twitter_account.rb
