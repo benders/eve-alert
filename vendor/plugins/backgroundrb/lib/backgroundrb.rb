@@ -4,7 +4,7 @@ require "pathname"
 require "packet"
 require "ostruct"
 
-BACKGROUNDRB_ROOT = Pathname.new(RAILS_ROOT).realpath.to_s
+BACKGROUNDRB_ROOT = Rails.root.realpath.to_s
 require "backgroundrb/bdrb_config"
 unless defined?(BDRB_CONFIG)
   BDRB_CONFIG = BackgrounDRb::Config.read_config("#{BACKGROUNDRB_ROOT}/config/backgroundrb.yml")
