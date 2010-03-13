@@ -56,29 +56,6 @@ ActiveRecord::Schema.define(:version => 20100117232943) do
     t.datetime "updated_at"
   end
 
-  create_table "mail_messages", :force => true do |t|
-    t.integer  "character_id"
-    t.integer  "sender_id"
-    t.datetime "send_date"
-    t.string   "title"
-    t.integer  "to_corp_or_alliance_id"
-    t.string   "to_character_ids"
-    t.string   "to_list_ids"
-    t.boolean  "read"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "notifications", :force => true do |t|
-    t.integer  "character_id"
-    t.integer  "notification_type_id"
-    t.integer  "sender_id"
-    t.datetime "send_date"
-    t.boolean  "read"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "twitter_id"
     t.string   "login"
