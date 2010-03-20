@@ -4,5 +4,7 @@ EveAlert::Application.routes.draw do
       resources :characters
   end
 
+  resources :events
+
   match '/' => 'welcome#index'
 end

@@ -1,0 +1,38 @@
+<h1>List Events</h1>
+
+<div id="status"></div>
+
+<ol id="events">
+  <%= render @events %>
+</ol>
+
+<script type="text/javascript">
+  // Manually emulate a PeriodicUpdater so that we can have fine control
+  //  over the insertion events.
+  new PeriodicalExecuter(function(){
+    new Ajax.Request('/events', {
+      asynchronous:true,
+      evalScripts:false,
+      method:'get',
+      onSuccess: function(transport) {
+        if (transport.responseText.blank()) {
+          return;
+        };
+        events_block = $('events');
+        events_block.insert({ top: transport.responseText });
+        events_block.cleanWhitespace();
+        var events = events_block.childNodes;
+        // Loop in reverse, so that we can remove items as we go
+        var index = events.length; while (index--) {
+          var item = events[index];
+          if (index >= 5) {
+            item.remove();
+          } else if (item.hasClassName("new_event")) {
+            item.removeClassName("new_event");
+            new Effect.Highlight(item, {endcolor: '#666666'});
+          };
+        };
+      }
+    });
+  }, 5);
+</script>
